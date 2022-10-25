@@ -1,0 +1,353 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:wght@300&family=Playfair+Display:ital@1&family=Poppins:wght@100&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Anton", sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 3.5em;
+}
+h2 {
+  font-size: 2.7em;
+}
+h3 {
+  font-size: 2em;
+}
+p {
+  font-size: 1.25em;
+}
+UL {
+  list-style: none;
+}
+
+button {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: 1px solid black;
+  box-shadow: 2px 2px 10px black;
+  color: white;
+  background-color: blueviolet;
+}
+
+button:hover {
+  background-color: rgb(174, 113, 232);
+}
+
+.color-acento {
+  color: blueviolet;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+header {
+  background-color: rgb(255, 255, 255);
+}
+
+header .logo {
+  margin: 0;
+  padding: 25px 30px;
+  font-weight: bold;
+  color: blueviolet;
+  font-size: 2em;
+}
+
+header .container {
+  display: flex; /*hace que el contenido se poga horizontalmente*/
+  flex-direction: column;
+  align-items: center;
+}
+
+header nav {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+header a {
+  padding: 5px 12px;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+header a:hover {
+  
+  border-bottom: 2xp solid black;
+}
+
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 90vh; /* altura relativa ucupa el 90% de mi pantaya */
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/img/somos-proya.jpg");
+  /* se le pone conmo un hoverlay a l aimgen de fondo como un filtro negro */
+  background-repeat: no-repeat; /*para que no se repita la imagen */
+  background-size: cover; /*me ocupa todo el espacio disponible*/
+  background-position: center center; /* para que me centre bien la imagen*/
+}
+
+#hero h1 {
+  color: white;
+}
+
+#somos-proya .container {
+  text-align: center;
+  padding: 200px 12px;
+}
+
+#nuestros-programas {
+  background-color: rgb(30, 30, 30);
+  color: white;
+  text-align: center;
+}
+
+#nuestros-programas .container {
+  padding: 100px 0px;
+}
+
+#nuestros-programas h2 {
+  margin-top: -50px;
+  font-size: 3.4em;
+}
+#nuestros-programas p {
+  display: none; /*desaparece los parrafos */
+}
+
+#nuestros-programas .carta {
+  background-position: center center; /*paa que lasimagenes se vean conrrectamente*/
+  background-size: cover;
+  padding: 50px;
+  margin: 20px; /*para separarlos*/
+  border-radius: 15px;
+}
+
+/* me selecciona el primer carta */
+.carta:first-child {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/img/front-end.jpg");
+}
+
+/* me selecciona el segundo  carta */
+.carta:nth-child(2) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/img/stack.jpg");
+}
+/* me selecciona el tecer  carta */
+.carta:nth-child(3) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/img/python.jpg");
+}
+
+#caracteristicas .container {
+  text-align: center;
+  padding: 200px 12px;
+}
+
+#caracterosticas li {
+  margin: 12px 0px;
+  font-weight: bold; /*fuente negrita*/
+  font-size: large;
+}
+
+#aplica-ya {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  background-color: rgb(30, 30, 30);
+  color: white;
+  height: 80vh;
+}
+
+#aplica-ya h2 {
+  font-size: 10vw; /*font size relativo se hace mas pequeño cuando 0 la 0 *0.5 */
+}
+
+#aplica-ya button {
+ 
+  font-size: 4vw;
+}
+
+footer {
+  background-color: rgb(230, 230, 230);
+}
+
+footer p {
+  margin: 0px;
+  color: rgb(100, 100, 100);
+  padding: 12px;
+}
+
+footer .container {
+  height: 150;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* Estilizar para para pantallas mas grandes  (pc) */
+/* el @media screen  es para estilizar  */
+
+@media (min-width: 720px) {
+  /*cuando elancho de la pantalla supere los 720px va hacer esto*/
+
+  header {
+    position: fixed; /* fijamos el header asi bajemos scrolle  */
+    width: 100%;
+    opacity: 0.8;
+  }
+
+  header .container {
+    flex-direction: row; /* me paso el titulo etc a laizquierda */
+    justify-content: space-between; /*me separa los elementos en las ezquinas */
+  }
+
+  header .container a {
+    font-size: 1em;
+  }
+
+  header nav {
+    flex-direction: row;
+    padding-bottom: 0%;
+    padding-right: 3px;
+  }
+
+  #hero h1 {
+    font-size: 5em;
+  }
+
+  #somos-proya .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  #somos-proya .texto {
+    width: 50%;
+    max-width: 500px;
+    text-align: initial;
+    padding-left: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  #somos-proya h2 {
+    margin-top: 0px;
+  }
+
+  #somos-proya .img-container {
+    background-image: /*linear-gradient(
+            0deg, 
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        ) ,*/ url("/img/hero1.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+    width: 450px;
+  }
+
+  #nuestros-programas .programas {
+    display: flex; /*nos pone las cartas unas al lado de las otras*/
+    justify-content: center;
+  }
+
+  #nuestros-programas p {
+    display: block;
+    margin-bottom: 30px; /*sepramos un los botones*/
+  }
+
+  #nuestros-programas h3 {
+    margin-top: 0%;
+    font-size: 1.9em;
+  }
+  
+  #nuestros-programas .carta {
+    padding: 20px;
+    background-color:rgba(50, 50, 50, 0.5);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    /* background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0px;
+    background-color */
+  }
+
+  /* me selecciona el primer carta
+  .carta:first-child {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("/img/front-end2.jpg");
+  }
+
+   me selecciona el segundo  carta 
+  .carta:nth-child(2) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("/img/stack2.jpg");
+  }
+   me selecciona el tecer  carta 
+  .carta:nth-child(3) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("/img/python2.jpg");
+  }*/
+
+  #caracteristicas{
+    background-image: url('/img/estudio.jpg');
+    background-repeat: no-repeat;
+    background-size: 500px 400px;
+    background-position: calc(100vw - 600px) 65px; /*darle posicion en x y en y a laimagen */
+  }
+
+  #caracteristicas .container{
+    text-align: initial;
+  }
+
+  #caracteristicas ul{
+    margin-left: 100px;
+  }
+
+  #aplica-ya h2{
+    font-size: 5em;
+  }
+
+  #aplica-ya .button{
+    font-size: 2em;
+  }
+
+  footer .container{
+    justify-content: flex-end;
+  }
+
+  @media (max-width: 938px) {
+    #caracteristicas{
+        background-image: none;
+    }
+  }
+
+  @media (min-width: 1100px) {
+    #caracteristicas {
+        background-position: calc(100vw - 800px);
+    }
+  }
+
+}
+
